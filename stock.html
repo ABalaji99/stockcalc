@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            color: #fff;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            background: #000000 !important;
+            display: grid;
+            place-items: center;
+        }
+
+        section{
+            padding: 20px ;
+            border: 1px solid #636363;
+            border-radius: 4px;
+            box-shadow: rgba(149, 149, 149, 0.24) 0px 3px 8px;
+        }
+
+        section h1{
+            margin-bottom: 20px;
+        }
+
+        section h3:last-child{
+            color: red !important;
+        }
+
+        section h3:last-child span {
+            color:  red !important;
+        }
+
+        section h3{
+            color: rgb(0, 230, 0) !important;
+        }
+
+        section h3 span {
+            color: rgb(0, 230, 0) !important;
+        }
+    </style>
+    
+
+    <div class="container">
+        <section>
+            <h1>Higher Value Section</h1>
+            <h3>Higher + : <span id="highplus"></span></h3>
+            <h3>Higher - : <span id="highminus"></span></h3>
+        </section>
+        <section>
+            <h1>Lower Value Section</h1> 
+            <h3>Lower + : <span id="lowplus"></span></h3>
+            <h3>Lower - : <span id="lowminus"></span></h3>
+        </section>
+    </div>
+
+    <script>
+    let high = +prompt('Enter High Value')
+    let low = +prompt('Enter Low Value')
+
+
+    let diff = high-low;
+
+    let dividend = diff/4;
+
+
+    document.getElementById('highplus').innerHTML= high+dividend;
+    document.getElementById('highminus').innerHTML= high-dividend;
+    document.getElementById('lowplus').innerHTML= low+dividend;
+    document.getElementById('lowminus').innerHTML= low-dividend;
+    </script>
+</body>
+</html>
